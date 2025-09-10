@@ -15,9 +15,9 @@ app.get('/get-source', async (req, res) => {
         }
 
         const response = await fetch(url);
-
+        
         if (!response.ok) {
-            return res.status(response.status).send(Error fetching URL: ${ response.statusText });
+            return res.status(response.status).send(Error fetching URL: ${response.statusText});
         }
 
         const sourceCode = await response.text();
@@ -29,5 +29,5 @@ app.get('/get-source', async (req, res) => {
 });
 
 app.listen(port, () => {
-    console.log(Proxy server is running on port ${ port });
+    console.log(Proxy server is running on port ${port});
 });
