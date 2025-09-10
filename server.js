@@ -1,5 +1,5 @@
 const express = require('express');
-// Удаляем импорт node-fetch, так как fetch теперь встроенная функция
+
 const cors = require('cors');
 
 const app = express();
