@@ -1,5 +1,5 @@
 const express = require('express');
-const fetch = require('node-fetch');
+// Удаляем импорт node-fetch, так как fetch теперь встроенная функция
 const cors = require('cors');
 
 const app = express();
@@ -17,7 +17,6 @@ app.get('/get-source', async (req, res) => {
         const response = await fetch(url);
         
         if (!response.ok) {
-            // ИСПРАВЛЕНО: Добавлены обратные кавычки вокруг шаблонного литерала
             return res.status(response.status).send(`Error fetching URL: ${response.statusText}`);
         }
 
